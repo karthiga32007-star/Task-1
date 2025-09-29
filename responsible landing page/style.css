@@ -1,0 +1,74 @@
+/* Reset */
+* {margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif;}
+
+body {line-height:1.6; color:#333;}
+
+/* Navbar */
+header {
+  position:fixed; top:0; left:0; width:100%;
+  background:#fff; display:flex; justify-content:space-between; 
+  align-items:center; padding:15px 40px; 
+  box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:1000;
+}
+header .logo {font-size:22px; font-weight:bold; color:#e67e22;}
+nav ul {display:flex; list-style:none;}
+nav ul li {margin-left:20px;}
+nav ul li a {text-decoration:none; color:#333; font-weight:500;}
+nav ul li a:hover {color:#e67e22;}
+.menu-toggle {display:none; cursor:pointer; font-size:24px;}
+
+/* Hero */
+.hero {
+  background:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+  height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+  text-align:center; color:#fff; padding:0 20px;
+}
+.hero h1 {font-size:48px; margin-bottom:15px;}
+.hero p {font-size:20px; margin-bottom:25px;}
+.hero a {background:#e67e22; padding:12px 24px; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold;}
+.hero a:hover {background:#d35400;}
+
+/* Sections */
+section {padding:80px 40px;}
+.about {display:flex; flex-wrap:wrap; align-items:center; gap:30px;}
+.about img {width:100%; max-width:500px; border-radius:10px;}
+.about-text {flex:1;}
+.about-text h2 {margin-bottom:15px; color:#e67e22;}
+
+/* Menu */
+.menu {background:#f9f9f9;}
+.menu h2 {text-align:center; margin-bottom:40px; color:#e67e22;}
+.menu-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+.menu-item {background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:center;}
+.menu-item img {width:100%; border-radius:10px; margin-bottom:15px;}
+.menu-item h3 {margin-bottom:5px; color:#333;}
+.menu-item p {font-size:14px; color:#555;}
+.menu-item span {display:block; margin-top:10px; font-weight:bold; color:#e67e22;}
+
+/* Testimonials */
+.testimonials h2 {text-align:center; margin-bottom:40px; color:#e67e22;}
+.testimonial-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+.testimonial {background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+.testimonial p {font-style:italic; margin-bottom:10px;}
+.testimonial h4 {color:#e67e22;}
+
+/* Reservation */
+.reservation h2 {text-align:center; margin-bottom:30px; color:#e67e22;}
+.reservation form {max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px;}
+.reservation input, .reservation textarea {padding:10px; border:1px solid #ccc; border-radius:5px; width:100%;}
+.reservation button {padding:12px; background:#e67e22; border:none; color:#fff; font-weight:bold; border-radius:5px; cursor:pointer;}
+.reservation button:hover {background:#d35400;}
+
+/* Footer */
+footer {background:#333; color:#fff; text-align:center; padding:20px;}
+footer p {margin:5px 0;}
+footer a {color:#e67e22; margin:0 5px; text-decoration:none;}
+
+/* Responsive */
+@media(max-width:768px){
+  nav ul {display:none; flex-direction:column; background:#fff; position:absolute; top:60px; right:20px; width:200px; box-shadow:0 2px 5px rgba(0,0,0,0.2);}
+  nav ul.show {display:flex;}
+  .menu-toggle {display:block;}
+  .hero h1 {font-size:32px;}
+  .hero p {font-size:16px;}
+}
